@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button>
+      <ion-title style="text-align: center;">Venta de Productos</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="floating">PRODUCTO</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.nombre" id="txtNombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">DESCRIPCION</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.descripcion" id="txtDescripcion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">MARCA</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.marca" id="txtMarca"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">PRECIO</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.precio" id="txtPrecio"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">CANTIDAD</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.stock" id="txtStock"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">CLIENTE</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.cliente" id="txtCliente"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">LOCAL</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.local" id="txtLocal"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">DIRECCION</ion-label>
+    <ion-input type="text" [(ngModel)]="producto.direccion" id="txtDireccion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">FECHA</ion-label>
+    <ion-datetime [(ngModel)]="producto.fecha" id="txtFecha" displayFormat="MM/DD/YYYY" min="2021-08-01"
+      max="2022-12-09" value="2002-09-23"></ion-datetime>
+  </ion-item>
+
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
+      <ion-row><ion-button (click)="agregarProducto();">Guardar</ion-button></ion-row>
+     <!--  <ion-row><ion-button (click)="borrarproducto();">Eliminar</ion-button></ion-row> -->
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-list-header>
+      Productos
+    </ion-list-header>
+    <ion-item *ngFor="let producto of listaProductos">
+      <ion-avatar slot="start">
+        <img src="https://i.ibb.co/zNtJjn4/133482.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h3>Producto: {{producto.nombre}}</h3>
+        <h3>Descripcion: {{producto.descripcion}}</h3>
+        <h3>Marca: {{producto.marca}}</h3>
+        <h3>Precio: {{producto.precio}}</h3>
+        <h3>Cantidad: {{producto.stock}}</h3>
+        <h3>Cliente: {{producto.cliente}}</h3>
+        <h3>Local: {{producto.local}}</h3>
+        <h3>Direccion: {{producto.direccion}}</h3>
+        <h3>Fecha: {{producto.fecha}}</h3>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button><ion-title style="text-align: center;">Listado Cliente</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      Clientes
+    </ion-list-header>
+    <ion-item *ngFor="let cliente of listaCliente">
+      <ion-avatar slot="start">
+        <img src="https://i.ibb.co/zNtJjn4/133482.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h3>Rice/Ruc: {{cliente.precio}}</h3>
+        <h3>Nombre: {{cliente.nombre}}</h3>
+        <h3>Apellido: {{cliente.apellido}}</h3>
+        <h3>Telf: {{cliente.telf}}</h3>
+        <h3>Correo: {{cliente.correo}}</h3>
+        <h3>Local: {{cliente.descripcion}}</h3>
+
+        <h3>Fecha: {{cliente.stock}}</h3>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
