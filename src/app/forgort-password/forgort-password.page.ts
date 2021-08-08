@@ -39,7 +39,6 @@ export class ForgortPasswordPage implements OnInit {
       loading.dismiss();
       this.toast(error.message,'danger');
     })
-
   }
 
   async toast(message, status){
