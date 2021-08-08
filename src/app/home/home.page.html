@@ -2,14 +2,21 @@
   <ion-toolbar>
     <ion-buttons>
       <ion-menu-button menu="main-menu">
-      </ion-menu-button><ion-title style="text-align: center;">HOME</ion-title>
+      </ion-menu-button>
+      <ion-title style="text-align: center;">HOME</ion-title>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding" [fullscreen]="true">
-
-  <ion-button expand="block" shape="round" (click)="gotoProfile()">Ver Perfil</ion-button>
+<ion-content class="ion-padding" [fullscreen]="true" style="border: black 10px solid;">
+  <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px; text-align: center;"><b>Catalogo y Registro de Ventas </b></p>
+  <ion-button expand="block" shape="round" (click)="gotoProfile()">Ver Mi Perfil</ion-button>
+  <hr>
   <ion-button expand="block" shape="round" (click)="logout()">Salir</ion-button>
-
+  <br>
+  <div align="center"> <img src="https://i.ibb.co/zNtJjn4/133482.jpg" height="200px" ></div>
 </ion-content>
+<ion-footer >
+  <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">&copy; DINOCO 2021
+    || Proyecto Final</p>
+</ion-footer>

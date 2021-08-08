@@ -15,7 +15,7 @@
 
         <ion-item>
           <ion-label position="stacked"> Email</ion-label>
-          <ion-input required type="text" [(ngModel)]="email" name="email"></ion-input>
+          <ion-input required type="email" [(ngModel)]="email" name="email"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -26,9 +26,9 @@
           <ion-label position="stacked"> Password</ion-label>
           <ion-input required type="password" [(ngModel)]="password" name="password"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-button type="submit" expand="block"  (click)="register()">Registrar</ion-button>
-        </ion-item>
+
+          <ion-button align="center" expand="block" shape="round" type="submit" (click)="register()">Registrar</ion-button>
+
 
         <ion-row>
           <ion-col>
@@ -41,3 +41,6 @@
     </form>
   </ion-card>
 </ion-content>
+<ion-footer >
+  <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">&copy; DINOCO 2021</p>
+</ion-footer>

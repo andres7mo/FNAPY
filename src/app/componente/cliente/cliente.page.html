@@ -10,32 +10,32 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label position="floating">RUC / RICE</ion-label>
-    <ion-input type="text" [(ngModel)]="cliente.precio" id="txtNombre" ></ion-input>
+    <ion-input required="required" autofocus="autofocus"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" [(ngModel)]="cliente.precio" id="txtNombre" ></ion-input>
   </ion-item>
    <ion-item>
     <ion-label position="floating">Nombre</ion-label>
-    <ion-input type="text" [(ngModel)]="cliente.nombre" id="txtNombre" ></ion-input>
+    <ion-input required="required" autofocus="autofocus" type="text" [(ngModel)]="cliente.nombre" id="txtNombre" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Apellido</ion-label>
-    <ion-input type="text" [(ngModel)]="cliente.apellido" id="txtApellido" ></ion-input>
+    <ion-input required="required" autofocus="autofocus" type="text" [(ngModel)]="cliente.apellido" id="txtApellido" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Telf</ion-label>
-    <ion-input type="text" [(ngModel)]="cliente.telf" id="txtTelf" ></ion-input>
+    <ion-input required="required" autofocus="autofocus"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" [(ngModel)]="cliente.telf" id="txtTelf" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Correo</ion-label>
-    <ion-input type="text" [(ngModel)]="cliente.correo" id="txtCorreo" ></ion-input>
+    <ion-input required="required" autofocus="autofocus" type="email" [(ngModel)]="cliente.correo" id="txtCorreo" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Local</ion-label>
-    <ion-input type="text" [(ngModel)]="cliente.descripcion" id="txtDescripcion" ></ion-input>
+    <ion-input required="required" autofocus="autofocus" type="text" [(ngModel)]="cliente.descripcion" id="txtDescripcion" ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Fecha</ion-label>
-    <ion-datetime [(ngModel)]="cliente.stock" id="txtFecha" displayFormat="MM/DD/YYYY" min="2021-08-01"
+    <ion-datetime required="required" autofocus="autofocus" [(ngModel)]="cliente.stock" id="txtFecha" displayFormat="MM/DD/YYYY" min="2021-08-01"
     max="2022-12-09" value="2002-09-23"></ion-datetime>
   </ion-item>
   <ion-row>
@@ -46,3 +46,6 @@
     <ion-col></ion-col>
   </ion-row>
 </ion-content>
+<ion-footer >
+  <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">&copy; DINOCO 2021</p>
+</ion-footer>
