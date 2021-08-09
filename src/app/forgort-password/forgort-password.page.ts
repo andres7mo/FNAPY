@@ -52,4 +52,6 @@ export class ForgortPasswordPage implements OnInit {
     toast.present();
   }
 
+  
+
 }

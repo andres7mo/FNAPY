@@ -31,8 +31,6 @@ export class LoginPage implements OnInit {
     }
   }
 
-
-
   async toast(message, status){
     const toast= await this.toastr.create({
       // eslint-disable-next-line object-shorthand
